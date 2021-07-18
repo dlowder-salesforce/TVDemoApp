@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactNative, {
+  PixelRatio,
   Platform,
   SafeAreaView,
   Text,
@@ -33,9 +34,9 @@ const App = () => {
   };
 
   const buttonStyle = {
-    fontSize: 24,
-    padding: 20,
-    margin: 20,
+    fontSize: 24 / PixelRatio.get(),
+    padding: 20 / PixelRatio.get(),
+    margin: 20 / PixelRatio.get(),
     color: isDarkMode ? 'white' : 'black',
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
